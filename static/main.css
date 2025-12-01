@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+input,
+textarea,
+button {
+    font-family: "Fira Sans";
+    font-size: 13pt;
+}
+
+input,
+textarea,
+button {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input,
+textarea {
+    margin-bottom: 4px;
+    padding: 4px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    border: none;
+    background: #464688;
+    color: white;
+    padding: 8px;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        color: white;
+    }
+
+    input,
+    textarea {
+        color: white;
+        background: #222222;
+    }
+}

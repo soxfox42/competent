@@ -1,0 +1,15 @@
+name = "competent"
+compatibility_date = "2025-12-01"
+main = "src/main.tsx"
+
+[assets]
+directory = "static"
+
+[[routes]]
+pattern = "competent.soxfox.me"
+custom_domain = true
+
+[[d1_databases]]
+binding = "database"
+database_name = "competent"
+database_id = "2efea430-d67d-4f7e-8d51-86e2b1c24b50"

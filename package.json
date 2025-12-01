@@ -1,0 +1,18 @@
+{
+  "name": "competent",
+  "version": "1.0.0",
+  "description": "Tiny comment engine for Cloudflare Workers",
+  "main": "main.tsx",
+  "scripts": {
+    "dev": "wrangler dev"
+  },
+  "author": "Finn Coffey",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "wrangler": "^4.51.0"
+  },
+  "dependencies": {
+    "hono": "^4.10.7"
+  }
+}

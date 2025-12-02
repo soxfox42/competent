@@ -1,6 +1,6 @@
 name = "competent"
 compatibility_date = "2025-12-01"
-main = "src/main.tsx"
+main = "src/main.ts"
 
 [assets]
 directory = "static"

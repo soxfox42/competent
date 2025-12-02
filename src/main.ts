@@ -76,6 +76,37 @@ async function postComment(author: string, body: string, slug: string) {
     .prepare(`INSERT INTO Comments (author, body, post_slug) VALUES (?, ?, ?)`)
     .bind(author, body, slug);
   await query.run();
+
+  await fetch(env.WEBHOOK_URL + "?with_components=true", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      components: [
+        {
+          type: 10,
+          content: `New comment on ${slug}`,
+        },
+        {
+          type: 17,
+          accent_color: 14483615,
+          spoiler: false,
+          components: [
+            {
+              type: 10,
+              content: `## ${author}`,
+            },
+            {
+              type: 10,
+              content: body,
+            },
+          ],
+        },
+      ],
+      flags: 1 << 15,
+    }),
+  });
 }
 
 app.get("/comments/:slug", async (c) => {
